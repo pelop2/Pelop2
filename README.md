@@ -1,19 +1,4 @@
-name: Unzip project
-on:
-  workflow_dispatch:
-permissions:
-  contents: write
-jobs:
-  unzip:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: |
-          for z in singular-point.zip .github/singular-point.zip; do
-            if [ -f "$z" ]; then unzip -oq "$z"; rm "$z"; fi
-          done
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Unpack project" || exit 0
-          git push
+# SINGULAR POINT // RESEARCH TERMINAL
+Setup: cp .env.local.example .env.local (add key), npm install, npm run dev. Install as an app: open in Chrome/Edge/Safari and choose Install or Add to Home Screen. Deploy: push to Vercel, set ANTHROPIC_API_KEY.
+/api/channel uses an in-memory store (single instance). For Vercel/multi-instance, swap for Redis, Supabase or a WebSocket service.
+iPhone: open the deployed HTTPS URL in Safari, tap Share, then Add to Home Screen. Camera needs HTTPS and Allow when prompted.
