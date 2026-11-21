@@ -1,0 +1,10 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{background:#f8fafc;color:#0f172a;font-family:ui-sans-serif,system-ui,sans-serif}
+.mono{font-family:ui-monospace,Menlo,monospace}
+@keyframes pulse2{0%,100%{box-shadow:0 0 0 0 var(--a)}50%{box-shadow:0 0 0 8px transparent}}
+.streaming{animation:pulse2 1.4s infinite}
+
+input,textarea{font-size:16px}
+.safe{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+html,body{overscroll-behavior:none;-webkit-text-size-adjust:100%}
+button{touch-action:manipulation}
